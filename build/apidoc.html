@@ -46,574 +46,575 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/socketio/socket.io#readme"
-        
+
     >socket.io (v1.7.3)</a>
 </h1>
+<h4>node.js realtime framework server</h4>
 <div class="apidocSectionDiv"><a
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io">module socket.io</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.io.client">
             function <span class="apidocSignatureSpan">socket.io.</span>io.client
             <span class="apidocSignatureSpan">(server, conn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.io.namespace">
             function <span class="apidocSignatureSpan">socket.io.</span>io.namespace
             <span class="apidocSignatureSpan">(server, name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.io.socket">
             function <span class="apidocSignatureSpan">socket.io.</span>io.socket
             <span class="apidocSignatureSpan">(nsp, client, query)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.listen">
             function <span class="apidocSignatureSpan">socket.io.</span>listen
             <span class="apidocSignatureSpan">(srv, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io.</span>io.client.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io.</span>io.namespace.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io.</span>io.socket.prototype</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io.client">module socket.io.client</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.client">
             function <span class="apidocSignatureSpan">socket.io.</span>client
             <span class="apidocSignatureSpan">(server, conn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io.client.prototype">module socket.io.client.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.close">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>close
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.connect">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>connect
             <span class="apidocSignatureSpan">(name, query)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.destroy">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>destroy
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.disconnect">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>disconnect
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.onclose">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>onclose
             <span class="apidocSignatureSpan">(reason)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.ondata">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>ondata
             <span class="apidocSignatureSpan">(data)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.ondecoded">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>ondecoded
             <span class="apidocSignatureSpan">(packet)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.onerror">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>onerror
             <span class="apidocSignatureSpan">(err)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.packet">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>packet
             <span class="apidocSignatureSpan">(packet, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.remove">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>remove
             <span class="apidocSignatureSpan">(socket)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.client.prototype.setup">
             function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>setup
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io.namespace">module socket.io.namespace</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.namespace">
             function <span class="apidocSignatureSpan">socket.io.</span>namespace
             <span class="apidocSignatureSpan">(server, name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io.namespace.</span>events</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io.namespace.</span>flags</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io.namespace.prototype">module socket.io.namespace.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.add">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>add
             <span class="apidocSignatureSpan">(client, query, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.clients">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>clients
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.compress">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>compress
             <span class="apidocSignatureSpan">(compress)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.emit">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>emit
             <span class="apidocSignatureSpan">(ev)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.in">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>in
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.initAdapter">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>initAdapter
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.remove">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>remove
             <span class="apidocSignatureSpan">(socket)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.run">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>run
             <span class="apidocSignatureSpan">(socket, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.send">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>send
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.to">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>to
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.use">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>use
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.namespace.prototype.write">
             function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>write
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io.socket">module socket.io.socket</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.socket">
             function <span class="apidocSignatureSpan">socket.io.</span>socket
             <span class="apidocSignatureSpan">(nsp, client, query)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io.socket.</span>events</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io.socket.prototype">module socket.io.socket.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.ack">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>ack
             <span class="apidocSignatureSpan">(id)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.buildHandshake">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>buildHandshake
             <span class="apidocSignatureSpan">(query)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.compress">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>compress
             <span class="apidocSignatureSpan">(compress)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.disconnect">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>disconnect
             <span class="apidocSignatureSpan">(close)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.dispatch">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>dispatch
             <span class="apidocSignatureSpan">(event)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.emit">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>emit
             <span class="apidocSignatureSpan">(ev)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.error">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>error
             <span class="apidocSignatureSpan">(err)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.in">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>in
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.join">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>join
             <span class="apidocSignatureSpan">(room, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.leave">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>leave
             <span class="apidocSignatureSpan">(room, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.leaveAll">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>leaveAll
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.onack">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onack
             <span class="apidocSignatureSpan">(packet)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.onclose">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onclose
             <span class="apidocSignatureSpan">(reason)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.onconnect">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onconnect
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.ondisconnect">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>ondisconnect
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.onerror">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onerror
             <span class="apidocSignatureSpan">(err)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.onevent">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onevent
             <span class="apidocSignatureSpan">(packet)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.onpacket">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onpacket
             <span class="apidocSignatureSpan">(packet)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.packet">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>packet
             <span class="apidocSignatureSpan">(packet, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.run">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>run
             <span class="apidocSignatureSpan">(event, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.send">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>send
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.to">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>to
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.use">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>use
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.socket.io.socket.prototype.write">
             function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>write
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io" id="apidoc.module.socket.io">module socket.io</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.io.client" id="apidoc.element.socket.io.io.client">
         function <span class="apidocSignatureSpan">socket.io.</span>io.client
@@ -635,9 +636,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.io.namespace" id="apidoc.element.socket.io.io.namespace">
         function <span class="apidocSignatureSpan">socket.io.</span>io.namespace
@@ -656,9 +657,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.io.socket" id="apidoc.element.socket.io.io.socket">
         function <span class="apidocSignatureSpan">socket.io.</span>io.socket
@@ -682,9 +683,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.listen" id="apidoc.element.socket.io.listen">
         function <span class="apidocSignatureSpan">socket.io.</span>listen
@@ -725,20 +726,20 @@ var io = require(&#x27;socket.io&#x27;)();
 io.on(&#x27;connection&#x27;, function(client){});
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io.client" id="apidoc.module.socket.io.client">module socket.io.client</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.client" id="apidoc.element.socket.io.client.client">
         function <span class="apidocSignatureSpan">socket.io.</span>client
@@ -760,14 +761,14 @@ io.on(&#x27;connection&#x27;, function(client){});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io.client.prototype" id="apidoc.module.socket.io.client.prototype">module socket.io.client.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.close" id="apidoc.element.socket.io.client.prototype.close">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>close
@@ -790,9 +791,9 @@ For other available methods, see `Namespace` below.
 
 Closes socket.io server.
 
-The optional `fn` is passed to the `server.<span class="apidocCodeKeywordSpan">close</span>([callback])` method of the 
-core `net` module and is called on error or when all connections are closed. 
-The callback is expected to implement the common single argument `err` 
+The optional `fn` is passed to the `server.<span class="apidocCodeKeywordSpan">close</span>([callback])` method of the
+core `net` module and is called on error or when all connections are closed.
+The callback is expected to implement the common single argument `err`
 signature (if any).
 
 ```js
@@ -800,9 +801,9 @@ var Server = require(&#x27;socket.io&#x27;);
 var PORT   = 3030;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.connect" id="apidoc.element.socket.io.client.prototype.connect">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>connect
@@ -852,9 +853,9 @@ if (parser.CONNECT == packet.type) {
   } else {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.destroy" id="apidoc.element.socket.io.client.prototype.destroy">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>destroy
@@ -886,9 +887,9 @@ for (var id in this.sockets) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.disconnect" id="apidoc.element.socket.io.client.prototype.disconnect">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>disconnect
@@ -923,9 +924,9 @@ Client.prototype.disconnect = function(){
 /**
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.onclose" id="apidoc.element.socket.io.client.prototype.onclose">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>onclose
@@ -967,9 +968,9 @@ Client.prototype.close = function(){
 * @param {Object} packet object
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.ondata" id="apidoc.element.socket.io.client.prototype.ondata">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>ondata
@@ -987,9 +988,9 @@ Client.prototype.close = function(){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.ondecoded" id="apidoc.element.socket.io.client.prototype.ondecoded">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>ondecoded
@@ -1013,9 +1014,9 @@ Client.prototype.close = function(){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.onerror" id="apidoc.element.socket.io.client.prototype.onerror">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>onerror
@@ -1049,9 +1050,9 @@ Client.prototype.ondata = function(data){
 * @api private
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.packet" id="apidoc.element.socket.io.client.prototype.packet">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>packet
@@ -1092,8 +1093,7 @@ Client.prototype.connect = function(name, query){
 debug(&#x27;connecting to namespace %s&#x27;, name);
 var nsp = this.server.nsps[name];
 if (!nsp) {
-  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;})\
-;
+  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;});
   return;
 }
 
@@ -1103,9 +1103,9 @@ if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.remove" id="apidoc.element.socket.io.client.prototype.remove">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>remove
@@ -1139,9 +1139,9 @@ Socket.prototype.onclose = function(reason){
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.client.prototype.setup" id="apidoc.element.socket.io.client.prototype.setup">
         function <span class="apidocSignatureSpan">socket.io.client.prototype.</span>setup
@@ -1178,14 +1178,14 @@ function Client(server, conn){
 * Sets up event listeners.
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io.namespace" id="apidoc.module.socket.io.namespace">module socket.io.namespace</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.namespace" id="apidoc.element.socket.io.namespace.namespace">
         function <span class="apidocSignatureSpan">socket.io.</span>namespace
@@ -1204,18 +1204,18 @@ function Client(server, conn){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io.namespace.prototype" id="apidoc.module.socket.io.namespace.prototype">module socket.io.namespace.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.add" id="apidoc.element.socket.io.namespace.prototype.add">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>add
@@ -1270,9 +1270,9 @@ if (&#x27;/&#x27; == nsp.name &#x26;&#x26; self.connectBuffer.length &#x3e; 0) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.clients" id="apidoc.element.socket.io.namespace.prototype.clients">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>clients
@@ -1304,9 +1304,9 @@ io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">clients</span>(func
 An example to get all clients in namespace&#x27;s room:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.compress" id="apidoc.element.socket.io.namespace.prototype.compress">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>compress
@@ -1332,14 +1332,14 @@ io.on(&#x27;connection&#x27;, function(client){
 ```
 
 ### Socket#disconnect(close:Boolean):Socket
-  
-Disconnects this client. If value of close is `true`, closes the underlying connection. 
+
+Disconnects this client. If value of close is `true`, closes the underlying connection.
 Otherwise, it just disconnects the namespace.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.emit" id="apidoc.element.socket.io.namespace.prototype.emit">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>emit
@@ -1389,9 +1389,9 @@ Otherwise, it just disconnects the namespace.
 ### Server#close([fn:Function])
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.in" id="apidoc.element.socket.io.namespace.prototype.in">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>in
@@ -1421,9 +1421,9 @@ io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">in</span>(&#x27;gen
 As with broadcasting, the default is all clients from the default namespace (&#x27;/&#x27;):
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.initAdapter" id="apidoc.element.socket.io.namespace.prototype.initAdapter">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>initAdapter
@@ -1452,9 +1452,9 @@ function Namespace(server, name){
 Namespace.prototype.__proto__ = Emitter.prototype;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.remove" id="apidoc.element.socket.io.namespace.prototype.remove">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>remove
@@ -1486,9 +1486,9 @@ Socket.prototype.onclose = function(reason){
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.run" id="apidoc.element.socket.io.namespace.prototype.run">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>run
@@ -1532,9 +1532,9 @@ if (err) return socket.error(err.data || err.message);
 self.sockets[socket.id] = socket;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.send" id="apidoc.element.socket.io.namespace.prototype.send">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>send
@@ -1550,9 +1550,9 @@ self.sockets[socket.id] = socket;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.to" id="apidoc.element.socket.io.namespace.prototype.to">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>to
@@ -1573,8 +1573,7 @@ To emit to multiple rooms, you can call `to` several times.
 ```js
 var io = require(&#x27;socket.io&#x27;)();
 io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; }\
-);
+  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
 });
 ```
 
@@ -1583,9 +1582,9 @@ io.on(&#x27;connection&#x27;, function(client){
 Same as `Socket#to`
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.use" id="apidoc.element.socket.io.namespace.prototype.use">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>use
@@ -1615,9 +1614,9 @@ Errors passed to middleware callbacks are sent as special `error`
 packets to clients.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.namespace.prototype.write" id="apidoc.element.socket.io.namespace.prototype.write">
         function <span class="apidocSignatureSpan">socket.io.namespace.prototype.</span>write
@@ -1649,14 +1648,14 @@ if (&#x27;open&#x27; == this.conn.readyState) {
     this.encoder.encode(packet, function (encodedPackets) { // encode, then write results to engine
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io.socket" id="apidoc.module.socket.io.socket">module socket.io.socket</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.socket" id="apidoc.element.socket.io.socket.socket">
         function <span class="apidocSignatureSpan">socket.io.</span>socket
@@ -1680,16 +1679,16 @@ if (&#x27;open&#x27; == this.conn.readyState) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.socket.io.socket.prototype" id="apidoc.module.socket.io.socket.prototype">module socket.io.socket.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.ack" id="apidoc.element.socket.io.socket.prototype.ack">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>ack
@@ -1734,9 +1733,9 @@ Socket.prototype.onevent = function(packet){
 * Produces an ack callback to emit with an event.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.buildHandshake" id="apidoc.element.socket.io.socket.prototype.buildHandshake">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>buildHandshake
@@ -1779,9 +1778,9 @@ Socket.prototype.onevent = function(packet){
 */
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.compress" id="apidoc.element.socket.io.socket.prototype.compress">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>compress
@@ -1807,14 +1806,14 @@ io.on(&#x27;connection&#x27;, function(client){
 ```
 
 ### Socket#disconnect(close:Boolean):Socket
-  
-Disconnects this client. If value of close is `true`, closes the underlying connection. 
+
+Disconnects this client. If value of close is `true`, closes the underlying connection.
 Otherwise, it just disconnects the namespace.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.disconnect" id="apidoc.element.socket.io.socket.prototype.disconnect">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>disconnect
@@ -1850,9 +1849,9 @@ Client.prototype.disconnect = function(){
 /**
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.dispatch" id="apidoc.element.socket.io.socket.prototype.dispatch">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>dispatch
@@ -1890,9 +1889,9 @@ Client.prototype.disconnect = function(){
 * @api private
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.emit" id="apidoc.element.socket.io.socket.prototype.emit">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>emit
@@ -1958,9 +1957,9 @@ Client.prototype.disconnect = function(){
 ### Server#close([fn:Function])
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.error" id="apidoc.element.socket.io.socket.prototype.error">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>error
@@ -1989,9 +1988,9 @@ self.sockets[socket.id] = socket;
 // violations (such as a disconnection before the connection
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.in" id="apidoc.element.socket.io.socket.prototype.in">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>in
@@ -2021,9 +2020,9 @@ io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">in</span>(&#x27;gen
 As with broadcasting, the default is all clients from the default namespace (&#x27;/&#x27;):
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.join" id="apidoc.element.socket.io.socket.prototype.join">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>join
@@ -2064,9 +2063,9 @@ Socket.prototype.onconnect = function(){
 * @param {Object} packet
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.leave" id="apidoc.element.socket.io.socket.prototype.leave">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>leave
@@ -2087,9 +2086,9 @@ Socket.prototype.onconnect = function(){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.leaveAll" id="apidoc.element.socket.io.socket.prototype.leaveAll">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>leaveAll
@@ -2119,9 +2118,9 @@ Socket.prototype.onclose = function(reason){
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.onack" id="apidoc.element.socket.io.socket.prototype.onack">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onack
@@ -2157,9 +2156,9 @@ case parser.BINARY_ACK:
 case parser.DISCONNECT:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.onclose" id="apidoc.element.socket.io.socket.prototype.onclose">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onclose
@@ -2197,9 +2196,9 @@ Client.prototype.close = function(){
 * @param {Object} packet object
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.onconnect" id="apidoc.element.socket.io.socket.prototype.onconnect">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onconnect
@@ -2231,9 +2230,9 @@ Client.prototype.close = function(){
   debug(&#x27;next called after client was closed - ignoring socket&#x27;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.ondisconnect" id="apidoc.element.socket.io.socket.prototype.ondisconnect">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>ondisconnect
@@ -2262,9 +2261,9 @@ Client.prototype.close = function(){
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.onerror" id="apidoc.element.socket.io.socket.prototype.onerror">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onerror
@@ -2298,9 +2297,9 @@ Client.prototype.ondata = function(data){
 * @api private
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.onevent" id="apidoc.element.socket.io.socket.prototype.onevent">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onevent
@@ -2337,9 +2336,9 @@ case parser.BINARY_EVENT:
 case parser.ACK:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.onpacket" id="apidoc.element.socket.io.socket.prototype.onpacket">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>onpacket
@@ -2391,9 +2390,9 @@ Client.prototype.ondecoded = function(packet) {
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.packet" id="apidoc.element.socket.io.socket.prototype.packet">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>packet
@@ -2415,8 +2414,7 @@ Client.prototype.connect = function(name, query){
 debug(&#x27;connecting to namespace %s&#x27;, name);
 var nsp = this.server.nsps[name];
 if (!nsp) {
-  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;})\
-;
+  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;});
   return;
 }
 
@@ -2426,9 +2424,9 @@ if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.run" id="apidoc.element.socket.io.socket.prototype.run">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>run
@@ -2472,9 +2470,9 @@ if (err) return socket.error(err.data || err.message);
 self.sockets[socket.id] = socket;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.send" id="apidoc.element.socket.io.socket.prototype.send">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>send
@@ -2490,9 +2488,9 @@ self.sockets[socket.id] = socket;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.to" id="apidoc.element.socket.io.socket.prototype.to">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>to
@@ -2513,8 +2511,7 @@ To emit to multiple rooms, you can call `to` several times.
 ```js
 var io = require(&#x27;socket.io&#x27;)();
 io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; }\
-);
+  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
 });
 ```
 
@@ -2523,9 +2520,9 @@ io.on(&#x27;connection&#x27;, function(client){
 Same as `Socket#to`
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.use" id="apidoc.element.socket.io.socket.prototype.use">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>use
@@ -2555,9 +2552,9 @@ Errors passed to middleware callbacks are sent as special `error`
 packets to clients.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.socket.io.socket.prototype.write" id="apidoc.element.socket.io.socket.prototype.write">
         function <span class="apidocSignatureSpan">socket.io.socket.prototype.</span>write
@@ -2589,8 +2586,8 @@ if (&#x27;open&#x27; == this.conn.readyState) {
     this.encoder.encode(packet, function (encodedPackets) { // encode, then write results to engine
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
