@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/socketio/socket.io#readme"
-
-    >socket.io (v1.7.3)</a>
+    <a href="https://github.com/socketio/socket.io#readme">socket.io (v1.7.3)</a>
 </h1>
 <h4>node.js realtime framework server</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.socket.io">module socket.io</a><ol>
 
@@ -980,17 +973,17 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Server(srv, opts){
   if (!(this instanceof Server)) return new Server(srv, opts);
-  if (&#x27;object&#x27; == typeof srv &#x26;&#x26; !srv.listen) {
+  if ('object' == typeof srv &amp;&amp; !srv.listen) {
     opts = srv;
     srv = null;
   }
   opts = opts || {};
   this.nsps = {};
-  this.path(opts.path || &#x27;/socket.io&#x27;);
+  this.path(opts.path || '/socket.io');
   this.serveClient(false !== opts.serveClient);
   this.adapter(opts.adapter || Adapter);
-  this.origins(opts.origins || &#x27;*:*&#x27;);
-  this.sockets = this.of(&#x27;/&#x27;);
+  this.origins(opts.origins || '*:*');
+  this.sockets = this.of('/');
   if (srv) this.attach(srv, opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1031,17 +1024,17 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Server(srv, opts){
   if (!(this instanceof Server)) return new Server(srv, opts);
-  if (&#x27;object&#x27; == typeof srv &#x26;&#x26; !srv.listen) {
+  if ('object' == typeof srv &amp;&amp; !srv.listen) {
     opts = srv;
     srv = null;
   }
   opts = opts || {};
   this.nsps = {};
-  this.path(opts.path || &#x27;/socket.io&#x27;);
+  this.path(opts.path || '/socket.io');
   this.serveClient(false !== opts.serveClient);
   this.adapter(opts.adapter || Adapter);
-  this.origins(opts.origins || &#x27;*:*&#x27;);
-  this.sockets = this.of(&#x27;/&#x27;);
+  this.origins(opts.origins || '*:*');
+  this.sockets = this.of('/');
   if (srv) this.attach(srv, opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1081,7 +1074,7 @@
   this.nsp = nsp;
   this.server = nsp.server;
   this.adapter = this.nsp.adapter;
-  this.id = nsp.name !== &#x27;/&#x27; ? nsp.name + &#x27;#&#x27; + client.id : client.id;
+  this.id = nsp.name !== '/' ? nsp.name + '#' + client.id : client.id;
   this.client = client;
   this.conn = client.conn;
   this.rooms = {};
@@ -1105,26 +1098,26 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Server(srv, opts){
   if (!(this instanceof Server)) return new Server(srv, opts);
-  if (&#x27;object&#x27; == typeof srv &#x26;&#x26; !srv.listen) {
+  if ('object' == typeof srv &amp;&amp; !srv.listen) {
     opts = srv;
     srv = null;
   }
   opts = opts || {};
   this.nsps = {};
-  this.path(opts.path || &#x27;/socket.io&#x27;);
+  this.path(opts.path || '/socket.io');
   this.serveClient(false !== opts.serveClient);
   this.adapter(opts.adapter || Adapter);
-  this.origins(opts.origins || &#x27;*:*&#x27;);
-  this.sockets = this.of(&#x27;/&#x27;);
+  this.origins(opts.origins || '*:*');
+  this.sockets = this.of('/');
   if (srv) this.attach(srv, opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```js
-var server = require(&#x27;http&#x27;).createServer();
-var io = require(&#x27;socket.io&#x27;)(server);
-io.on(&#x27;connection&#x27;, function(client){
-  client.on(&#x27;event&#x27;, function(data){});
-  client.on(&#x27;disconnect&#x27;, function(){});
+var server = require('http').createServer();
+var io = require('socket.io')(server);
+io.on('connection', function(client){
+  client.on('event', function(data){});
+  client.on('disconnect', function(){});
 });
 server.<span class="apidocCodeKeywordSpan">listen</span>(3000);
 ```
@@ -1132,8 +1125,8 @@ server.<span class="apidocCodeKeywordSpan">listen</span>(3000);
 ### Standalone
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){});
+var io = require('socket.io')();
+io.on('connection', function(client){});
 ...</pre></li>
     </ul>
 
@@ -1189,10 +1182,10 @@ io.on(&#x27;connection&#x27;, function(client){});
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">close = function (){
-  if (&#x27;open&#x27; == this.conn.readyState) {
-    debug(&#x27;forcing transport close&#x27;);
+  if ('open' == this.conn.readyState) {
+    debug('forcing transport close');
     this.conn.close();
-    this.onclose(&#x27;forced server close&#x27;);
+    this.onclose('forced server close');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1209,7 +1202,7 @@ The callback is expected to implement the common single argument `err`
 signature (if any).
 
 ```js
-var Server = require(&#x27;socket.io&#x27;);
+var Server = require('socket.io');
 var PORT   = 3030;
 ...</pre></li>
     </ul>
@@ -1224,14 +1217,14 @@ var PORT   = 3030;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">connect = function (name, query){
-  debug(&#x27;connecting to namespace %s&#x27;, name);
+  debug('connecting to namespace %s', name);
   var nsp = this.server.nsps[name];
   if (!nsp) {
-    this.packet({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;});
+    this.packet({ type: parser.ERROR, nsp: name, data : 'Invalid namespace'});
     return;
   }
 
-  if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
+  if ('/' != name &amp;&amp; !this.nsps['/']) {
     this.connectBuffer.push(name);
     return;
   }
@@ -1241,7 +1234,7 @@ var PORT   = 3030;
     self.sockets[socket.id] = socket;
     self.nsps[nsp.name] = socket;
 
-    if (&#x27;/&#x27; == nsp.name &#x26;&#x26; self.connectBuffer.length &#x3e; 0) {
+    if ('/' == nsp.name &amp;&amp; self.connectBuffer.length &gt; 0) {
       self.connectBuffer.forEach(self.connect, self);
       self.connectBuffer = [];
     }
@@ -1276,17 +1269,17 @@ if (parser.CONNECT == packet.type) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">destroy = function (){
-  this.conn.removeListener(&#x27;data&#x27;, this.ondata);
-  this.conn.removeListener(&#x27;error&#x27;, this.onerror);
-  this.conn.removeListener(&#x27;close&#x27;, this.onclose);
-  this.decoder.removeListener(&#x27;decoded&#x27;, this.ondecoded);
+  this.conn.removeListener('data', this.ondata);
+  this.conn.removeListener('error', this.onerror);
+  this.conn.removeListener('close', this.onclose);
+  this.decoder.removeListener('decoded', this.ondecoded);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  * @api private
  */
 
 Client.prototype.onclose = function(reason){
-debug(&#x27;client close with reason %s&#x27;, reason);
+debug('client close with reason %s', reason);
 
 // ignore a potential subsequent `close` event
 this.<span class="apidocCodeKeywordSpan">destroy</span>();
@@ -1347,7 +1340,7 @@ Client.prototype.disconnect = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onclose = function (reason){
-  debug(&#x27;client close with reason %s&#x27;, reason);
+  debug('client close with reason %s', reason);
 
   // ignore a potential subsequent `close` event
   this.destroy();
@@ -1367,10 +1360,10 @@ Client.prototype.disconnect = function(){
 */
 
 Client.prototype.close = function(){
- if (&#x27;open&#x27; == this.conn.readyState) {
-   debug(&#x27;forcing transport close&#x27;);
+ if ('open' == this.conn.readyState) {
+   debug('forcing transport close');
    this.conn.close();
-   this.<span class="apidocCodeKeywordSpan">onclose</span>(&#x27;forced server close&#x27;);
+   this.<span class="apidocCodeKeywordSpan">onclose</span>('forced server close');
  }
 };
 
@@ -1420,7 +1413,7 @@ Client.prototype.close = function(){
         socket.onpacket(packet);
       });
     } else {
-      debug(&#x27;no socket for namespace %s&#x27;, packet.nsp);
+      debug('no socket for namespace %s', packet.nsp);
     }
   }
 }</pre></li>
@@ -1442,7 +1435,7 @@ Client.prototype.close = function(){
       this.sockets[id].onerror(err);
     }
   }
-  this.onclose(&#x27;client error&#x27;);
+  this.onclose('client error');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 */
@@ -1478,14 +1471,14 @@ Client.prototype.ondata = function(data){
 
   // this writes to the actual connection
   function writeToEngine(encodedPackets) {
-    if (opts.volatile &#x26;&#x26; !self.conn.transport.writable) return;
-    for (var i = 0; i &#x3c; encodedPackets.length; i++) {
+    if (opts.volatile &amp;&amp; !self.conn.transport.writable) return;
+    for (var i = 0; i &lt; encodedPackets.length; i++) {
       self.conn.write(encodedPackets[i], { compress: opts.compress });
     }
   }
 
-  if (&#x27;open&#x27; == this.conn.readyState) {
-    debug(&#x27;writing packet %j&#x27;, packet);
+  if ('open' == this.conn.readyState) {
+    debug('writing packet %j', packet);
     if (!opts.preEncoded) { // not broadcasting, need to encode
       this.encoder.encode(packet, function (encodedPackets) { // encode, then write results to engine
         writeToEngine(encodedPackets);
@@ -1494,7 +1487,7 @@ Client.prototype.ondata = function(data){
       writeToEngine(packet);
     }
   } else {
-    debug(&#x27;ignoring packet write %j&#x27;, packet);
+    debug('ignoring packet write %j', packet);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1502,14 +1495,14 @@ Client.prototype.ondata = function(data){
  */
 
 Client.prototype.connect = function(name, query){
-debug(&#x27;connecting to namespace %s&#x27;, name);
+debug('connecting to namespace %s', name);
 var nsp = this.server.nsps[name];
 if (!nsp) {
-  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;});
+  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : 'Invalid namespace'});
   return;
 }
 
-if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
+if ('/' != name &amp;&amp; !this.nsps['/']) {
   this.connectBuffer.push(name);
   return;
 }
@@ -1531,7 +1524,7 @@ if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
     delete this.sockets[socket.id];
     delete this.nsps[nsp];
   } else {
-    debug(&#x27;ignoring remove for %s&#x27;, socket.id);
+    debug('ignoring remove for %s', socket.id);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1539,15 +1532,15 @@ if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
 
 Socket.prototype.onclose = function(reason){
   if (!this.connected) return this;
-  debug(&#x27;closing socket - reason %s&#x27;, reason);
-  this.emit(&#x27;disconnecting&#x27;, reason);
+  debug('closing socket - reason %s', reason);
+  this.emit('disconnecting', reason);
   this.leaveAll();
   this.nsp.<span class="apidocCodeKeywordSpan">remove</span>(this);
   this.client.remove(this);
   this.connected = false;
   this.disconnected = true;
   delete this.nsp.connected[this.id];
-  this.emit(&#x27;disconnect&#x27;, reason);
+  this.emit('disconnect', reason);
 };
 ...</pre></li>
     </ul>
@@ -1567,10 +1560,10 @@ Socket.prototype.onclose = function(reason){
   this.onerror = this.onerror.bind(this);
   this.ondecoded = this.ondecoded.bind(this);
 
-  this.decoder.on(&#x27;decoded&#x27;, this.ondecoded);
-  this.conn.on(&#x27;data&#x27;, this.ondata);
-  this.conn.on(&#x27;error&#x27;, this.onerror);
-  this.conn.on(&#x27;close&#x27;, this.onclose);
+  this.decoder.on('decoded', this.ondecoded);
+  this.conn.on('data', this.ondata);
+  this.conn.on('error', this.onerror);
+  this.conn.on('close', this.onclose);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 function Client(server, conn){
@@ -1607,26 +1600,26 @@ function Client(server, conn){
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Server(srv, opts){
   if (!(this instanceof Server)) return new Server(srv, opts);
-  if (&#x27;object&#x27; == typeof srv &#x26;&#x26; !srv.listen) {
+  if ('object' == typeof srv &amp;&amp; !srv.listen) {
     opts = srv;
     srv = null;
   }
   opts = opts || {};
   this.nsps = {};
-  this.path(opts.path || &#x27;/socket.io&#x27;);
+  this.path(opts.path || '/socket.io');
   this.serveClient(false !== opts.serveClient);
   this.adapter(opts.adapter || Adapter);
-  this.origins(opts.origins || &#x27;*:*&#x27;);
-  this.sockets = this.of(&#x27;/&#x27;);
+  this.origins(opts.origins || '*:*');
+  this.sockets = this.of('/');
   if (srv) this.attach(srv, opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```js
-var server = require(&#x27;http&#x27;).createServer();
-var io = require(&#x27;socket.io&#x27;)(server);
-io.on(&#x27;connection&#x27;, function(client){
-  client.on(&#x27;event&#x27;, function(data){});
-  client.on(&#x27;disconnect&#x27;, function(){});
+var server = require('http').createServer();
+var io = require('socket.io')(server);
+io.on('connection', function(client){
+  client.on('event', function(data){});
+  client.on('disconnect', function(){});
 });
 server.<span class="apidocCodeKeywordSpan">listen</span>(3000);
 ```
@@ -1634,8 +1627,8 @@ server.<span class="apidocCodeKeywordSpan">listen</span>(3000);
 ### Standalone
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){});
+var io = require('socket.io')();
+io.on('connection', function(client){});
 ...</pre></li>
     </ul>
 
@@ -1707,9 +1700,9 @@ Namespace.prototype.initAdapter = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">attach = function (srv, opts){
-  if (&#x27;function&#x27; == typeof srv) {
-    var msg = &#x27;You are trying to attach socket.io to an express &#x27; +
-    &#x27;request handler function. Please pass a http.Server instance.&#x27;;
+  if ('function' == typeof srv) {
+    var msg = 'You are trying to attach socket.io to an express ' +
+    'request handler function. Please pass a http.Server instance.';
     throw new Error(msg);
   }
 
@@ -1718,8 +1711,8 @@ Namespace.prototype.initAdapter = function(){
     srv = Number(srv);
   }
 
-  if (&#x27;number&#x27; == typeof srv) {
-    debug(&#x27;creating http server and binding to %d&#x27;, srv);
+  if ('number' == typeof srv) {
+    debug('creating http server and binding to %d', srv);
     var port = srv;
     srv = http.Server(function(req, res){
       res.writeHead(404);
@@ -1736,7 +1729,7 @@ Namespace.prototype.initAdapter = function(){
   opts.allowRequest = opts.allowRequest || this.checkRequest.bind(this);
 
   // initialize engine
-  debug(&#x27;creating engine.io instance with opts %j&#x27;, opts);
+  debug('creating engine.io instance with opts %j', opts);
   this.eio = engine.attach(srv, opts);
 
   // attach static file serving
@@ -1753,10 +1746,10 @@ Namespace.prototype.initAdapter = function(){
     <li>example usage<pre class="apidocCodePre">...
 ```js
 // pass a server and the `serveClient` option
-var io = require(&#x27;socket.io&#x27;)(http, { serveClient: false });
+var io = require('socket.io')(http, { serveClient: false });
 
 // or pass no server and then you can call the method
-var io = require(&#x27;socket.io&#x27;)();
+var io = require('socket.io')();
 io.serveClient(false);
 io.<span class="apidocCodeKeywordSpan">attach</span>(http);
 ```
@@ -1779,19 +1772,19 @@ Sets the path `v` under which `engine.io` and the static files will be
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">attachServe = function (srv){
-  debug(&#x27;attaching client serving req handler&#x27;);
-  var url = this._path + &#x27;/socket.io.js&#x27;;
-  var urlMap = this._path + &#x27;/socket.io.js.map&#x27;;
-  var evs = srv.listeners(&#x27;request&#x27;).slice(0);
+  debug('attaching client serving req handler');
+  var url = this._path + '/socket.io.js';
+  var urlMap = this._path + '/socket.io.js.map';
+  var evs = srv.listeners('request').slice(0);
   var self = this;
-  srv.removeAllListeners(&#x27;request&#x27;);
-  srv.on(&#x27;request&#x27;, function(req, res) {
+  srv.removeAllListeners('request');
+  srv.on('request', function(req, res) {
     if (0 === req.url.indexOf(urlMap)) {
       self.serveMap(req, res);
     } else if (0 === req.url.indexOf(url)) {
       self.serve(req, res);
     } else {
-      for (var i = 0; i &#x3c; evs.length; i++) {
+      for (var i = 0; i &lt; evs.length; i++) {
         evs[i].call(srv, req, res);
       }
     }
@@ -1811,7 +1804,7 @@ Sets the path `v` under which `engine.io` and the static files will be
     <ul>
     <li>description and source-code<pre class="apidocCodePre">bind = function (engine){
   this.engine = engine;
-  this.engine.on(&#x27;connection&#x27;, this.onconnection.bind(this));
+  this.engine.on('connection', this.onconnection.bind(this));
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1827,9 +1820,9 @@ this.ondata = this.ondata.bind(this);
 this.onerror = this.onerror.bind(this);
 this.ondecoded = this.ondecoded.bind(this);
 
-this.decoder.on(&#x27;decoded&#x27;, this.ondecoded);
-this.conn.on(&#x27;data&#x27;, this.ondata);
-this.conn.on(&#x27;error&#x27;, this.onerror);
+this.decoder.on('decoded', this.ondecoded);
+this.conn.on('data', this.ondata);
+this.conn.on('error', this.onerror);
 ...</pre></li>
     </ul>
 
@@ -1845,22 +1838,22 @@ this.conn.on(&#x27;error&#x27;, this.onerror);
     <li>description and source-code<pre class="apidocCodePre">checkRequest = function (req, fn) {
   var origin = req.headers.origin || req.headers.referer;
 
-  // file:// URLs produce a null Origin which can&#x27;t be authorized via echo-back
-  if (&#x27;null&#x27; == origin || null == origin) origin = &#x27;*&#x27;;
+  // file:// URLs produce a null Origin which can't be authorized via echo-back
+  if ('null' == origin || null == origin) origin = '*';
 
-  if (!!origin &#x26;&#x26; typeof(this._origins) == &#x27;function&#x27;) return this._origins(origin, fn);
-  if (this._origins.indexOf(&#x27;*:*&#x27;) !== -1) return fn(null, true);
+  if (!!origin &amp;&amp; typeof(this._origins) == 'function') return this._origins(origin, fn);
+  if (this._origins.indexOf('*:*') !== -1) return fn(null, true);
   if (origin) {
     try {
       var parts = url.parse(origin);
-      var defaultPort = &#x27;https:&#x27; == parts.protocol ? 443 : 80;
+      var defaultPort = 'https:' == parts.protocol ? 443 : 80;
       parts.port = parts.port != null
         ? parts.port
         : defaultPort;
       var ok =
-        ~this._origins.indexOf(parts.hostname + &#x27;:&#x27; + parts.port) ||
-        ~this._origins.indexOf(parts.hostname + &#x27;:*&#x27;) ||
-        ~this._origins.indexOf(&#x27;*:&#x27; + parts.port);
+        ~this._origins.indexOf(parts.hostname + ':' + parts.port) ||
+        ~this._origins.indexOf(parts.hostname + ':*') ||
+        ~this._origins.indexOf('*:' + parts.port);
       return fn(null, !!ok);
     } catch (ex) {
     }
@@ -1889,14 +1882,14 @@ Gets a list of client IDs connected to this namespace (across all nodes if appli
 An example to get all clients in a namespace:
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">clients</span>(function(error, clients){
+var io = require('socket.io')();
+io.of('/chat').<span class="apidocCodeKeywordSpan">clients</span>(function(error, clients){
   if (error) throw error;
-  console.log(clients); // =&#x3e; [PZDoMHjiu8PYfRiKAAAF, Anw2LatarvGVVXEIAAAD]
+  console.log(clients); // =&gt; [PZDoMHjiu8PYfRiKAAAF, Anw2LatarvGVVXEIAAAD]
 });
 ```
 
-An example to get all clients in namespace&#x27;s room:
+An example to get all clients in namespace's room:
 ...</pre></li>
     </ul>
 
@@ -1910,9 +1903,9 @@ An example to get all clients in namespace&#x27;s room:
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">close = function (fn){
-  for (var id in this.nsps[&#x27;/&#x27;].sockets) {
-    if (this.nsps[&#x27;/&#x27;].sockets.hasOwnProperty(id)) {
-      this.nsps[&#x27;/&#x27;].sockets[id].onclose();
+  for (var id in this.nsps['/'].sockets) {
+    if (this.nsps['/'].sockets.hasOwnProperty(id)) {
+      this.nsps['/'].sockets[id].onclose();
     }
   }
 
@@ -1921,7 +1914,7 @@ An example to get all clients in namespace&#x27;s room:
   if (this.httpServer) {
     this.httpServer.close(fn);
   } else {
-    fn &#x26;&#x26; fn();
+    fn &amp;&amp; fn();
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1938,7 +1931,7 @@ The callback is expected to implement the common single argument `err`
 signature (if any).
 
 ```js
-var Server = require(&#x27;socket.io&#x27;);
+var Server = require('socket.io');
 var PORT   = 3030;
 ...</pre></li>
     </ul>
@@ -1958,12 +1951,12 @@ var PORT   = 3030;
     <li>example usage<pre class="apidocCodePre">...
 
 Sets a modifier for a subsequent event emission that the event data will
-only be _compressed_ if the value is `true`. Defaults to `true` when you don&#x27;t call the method.
+only be _compressed_ if the value is `true`. Defaults to `true` when you don't call the method.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">compress</span>(false).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
+var io = require('socket.io')();
+io.on('connection', function(client){
+  client.<span class="apidocCodeKeywordSpan">compress</span>(false).emit('an event', { some: 'data' });
 });
 ```
 
@@ -1993,9 +1986,9 @@ Otherwise, it just disconnects the namespace.
   equivalent:
 
   ```js
-  var io = require(&#x27;socket.io&#x27;)();
-  io.sockets.<span class="apidocCodeKeywordSpan">emit</span>(&#x27;an event sent to all connected clients&#x27;);
-  io.emit(&#x27;an event sent to all connected clients&#x27;);
+  var io = require('socket.io')();
+  io.sockets.<span class="apidocCodeKeywordSpan">emit</span>('an event sent to all connected clients');
+  io.emit('an event sent to all connected clients');
   ```
 
   For other available methods, see `Namespace` below.
@@ -2050,17 +2043,17 @@ Otherwise, it just disconnects the namespace.
 });
 ```
 
-An example to get all clients in namespace&#x27;s room:
+An example to get all clients in namespace's room:
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">in</span>(&#x27;general&#x27;).clients(function(error, clients){
+var io = require('socket.io')();
+io.of('/chat').<span class="apidocCodeKeywordSpan">in</span>('general').clients(function(error, clients){
   if (error) throw error;
-  console.log(clients); // =&#x3e; [Anw2LatarvGVVXEIAAAD]
+  console.log(clients); // =&gt; [Anw2LatarvGVVXEIAAAD]
 });
 ```
 
-As with broadcasting, the default is all clients from the default namespace (&#x27;/&#x27;):
+As with broadcasting, the default is all clients from the default namespace ('/'):
 ...</pre></li>
     </ul>
 
@@ -2074,9 +2067,9 @@ As with broadcasting, the default is all clients from the default namespace (&#x
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">listen = function (srv, opts){
-  if (&#x27;function&#x27; == typeof srv) {
-    var msg = &#x27;You are trying to attach socket.io to an express &#x27; +
-    &#x27;request handler function. Please pass a http.Server instance.&#x27;;
+  if ('function' == typeof srv) {
+    var msg = 'You are trying to attach socket.io to an express ' +
+    'request handler function. Please pass a http.Server instance.';
     throw new Error(msg);
   }
 
@@ -2085,8 +2078,8 @@ As with broadcasting, the default is all clients from the default namespace (&#x
     srv = Number(srv);
   }
 
-  if (&#x27;number&#x27; == typeof srv) {
-    debug(&#x27;creating http server and binding to %d&#x27;, srv);
+  if ('number' == typeof srv) {
+    debug('creating http server and binding to %d', srv);
     var port = srv;
     srv = http.Server(function(req, res){
       res.writeHead(404);
@@ -2103,7 +2096,7 @@ As with broadcasting, the default is all clients from the default namespace (&#x
   opts.allowRequest = opts.allowRequest || this.checkRequest.bind(this);
 
   // initialize engine
-  debug(&#x27;creating engine.io instance with opts %j&#x27;, opts);
+  debug('creating engine.io instance with opts %j', opts);
   this.eio = engine.attach(srv, opts);
 
   // attach static file serving
@@ -2119,11 +2112,11 @@ As with broadcasting, the default is all clients from the default namespace (&#x
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```js
-var server = require(&#x27;http&#x27;).createServer();
-var io = require(&#x27;socket.io&#x27;)(server);
-io.on(&#x27;connection&#x27;, function(client){
-  client.on(&#x27;event&#x27;, function(data){});
-  client.on(&#x27;disconnect&#x27;, function(){});
+var server = require('http').createServer();
+var io = require('socket.io')(server);
+io.on('connection', function(client){
+  client.on('event', function(data){});
+  client.on('disconnect', function(){});
 });
 server.<span class="apidocCodeKeywordSpan">listen</span>(3000);
 ```
@@ -2131,8 +2124,8 @@ server.<span class="apidocCodeKeywordSpan">listen</span>(3000);
 ### Standalone
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){});
+var io = require('socket.io')();
+io.on('connection', function(client){});
 ...</pre></li>
     </ul>
 
@@ -2171,10 +2164,10 @@ io.on(&#x27;connection&#x27;, function(client){});
  */
 
 Socket.prototype.onerror = function(err){
-  if (this.<span class="apidocCodeKeywordSpan">listeners</span>(&#x27;error&#x27;).length) {
-    this.emit(&#x27;error&#x27;, err);
+  if (this.<span class="apidocCodeKeywordSpan">listeners</span>('error').length) {
+    this.emit('error', err);
   } else {
-    console.error(&#x27;Missing error handler on `socket`.&#x27;);
+    console.error('Missing error handler on `socket`.');
     console.error(err.stack);
   }
 };
@@ -2191,15 +2184,15 @@ Socket.prototype.onerror = function(err){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">of = function (name, fn){
-  if (String(name)[0] !== &#x27;/&#x27;) name = &#x27;/&#x27; + name;
+  if (String(name)[0] !== '/') name = '/' + name;
 
   var nsp = this.nsps[name];
   if (!nsp) {
-    debug(&#x27;initializing namespace %s&#x27;, name);
+    debug('initializing namespace %s', name);
     nsp = new Namespace(this, name);
     this.nsps[name] = nsp;
   }
-  if (fn) nsp.on(&#x27;connect&#x27;, fn);
+  if (fn) nsp.on('connect', fn);
   return nsp;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -2209,14 +2202,14 @@ Gets a list of client IDs connected to this namespace (across all nodes if appli
 An example to get all clients in a namespace:
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.<span class="apidocCodeKeywordSpan">of</span>(&#x27;/chat&#x27;).clients(function(error, clients){
+var io = require('socket.io')();
+io.<span class="apidocCodeKeywordSpan">of</span>('/chat').clients(function(error, clients){
   if (error) throw error;
-  console.log(clients); // =&#x3e; [PZDoMHjiu8PYfRiKAAAF, Anw2LatarvGVVXEIAAAD]
+  console.log(clients); // =&gt; [PZDoMHjiu8PYfRiKAAAF, Anw2LatarvGVVXEIAAAD]
 });
 ```
 
-An example to get all clients in namespace&#x27;s room:
+An example to get all clients in namespace's room:
 ...</pre></li>
     </ul>
 
@@ -2238,11 +2231,11 @@ The following example attaches socket.io to a plain Node.JS
 HTTP server listening on port `3000`.
 
 ```js
-var server = require(&#x27;http&#x27;).createServer();
-var io = require(&#x27;socket.io&#x27;)(server);
-io.<span class="apidocCodeKeywordSpan">on</span>(&#x27;connection&#x27;, function(client){
-  client.on(&#x27;event&#x27;, function(data){});
-  client.on(&#x27;disconnect&#x27;, function(){});
+var server = require('http').createServer();
+var io = require('socket.io')(server);
+io.<span class="apidocCodeKeywordSpan">on</span>('connection', function(client){
+  client.on('event', function(data){});
+  client.on('disconnect', function(){});
 });
 server.listen(3000);
 ```
@@ -2276,9 +2269,9 @@ server.listen(3000);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onconnection = function (conn){
-  debug(&#x27;incoming connection with id %s&#x27;, conn.id);
+  debug('incoming connection with id %s', conn.id);
   var client = new Client(this, conn);
-  client.connect(&#x27;/&#x27;);
+  client.connect('/');
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2313,7 +2306,7 @@ server.listen(3000);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">path = function (v){
   if (!arguments.length) return this._path;
-  this._path = v.replace(/\/$/, &#x27;&#x27;);
+  this._path = v.replace(/\/$/, '');
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2384,10 +2377,10 @@ server.listen(3000);
  */
 
 Client.prototype.destroy = function(){
-  this.conn.<span class="apidocCodeKeywordSpan">removeListener</span>(&#x27;data&#x27;, this.ondata);
-  this.conn.removeListener(&#x27;error&#x27;, this.onerror);
-  this.conn.removeListener(&#x27;close&#x27;, this.onclose);
-  this.decoder.removeListener(&#x27;decoded&#x27;, this.ondecoded);
+  this.conn.<span class="apidocCodeKeywordSpan">removeListener</span>('data', this.ondata);
+  this.conn.removeListener('error', this.onerror);
+  this.conn.removeListener('close', this.onclose);
+  this.decoder.removeListener('decoded', this.ondecoded);
 };
 ...</pre></li>
     </ul>
@@ -2419,22 +2412,22 @@ Client.prototype.destroy = function(){
     <li>description and source-code<pre class="apidocCodePre">serve = function (req, res){
   // Per the standard, ETags must be quoted:
   // https://tools.ietf.org/html/rfc7232#section-2.3
-  var expectedEtag = &#x27;&#x22;&#x27; + clientVersion + &#x27;&#x22;&#x27;;
+  var expectedEtag = '"' + clientVersion + '"';
 
-  var etag = req.headers[&#x27;if-none-match&#x27;];
+  var etag = req.headers['if-none-match'];
   if (etag) {
     if (expectedEtag == etag) {
-      debug(&#x27;serve client 304&#x27;);
+      debug('serve client 304');
       res.writeHead(304);
       res.end();
       return;
     }
   }
 
-  debug(&#x27;serve client source&#x27;);
-  res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/javascript&#x27;);
-  res.setHeader(&#x27;ETag&#x27;, expectedEtag);
-  res.setHeader(&#x27;X-SourceMap&#x27;, &#x27;socket.io.js.map&#x27;);
+  debug('serve client source');
+  res.setHeader('Content-Type', 'application/javascript');
+  res.setHeader('ETag', expectedEtag);
+  res.setHeader('X-SourceMap', 'socket.io.js.map');
   res.writeHead(200);
   res.end(clientSource);
 }</pre></li>
@@ -2454,12 +2447,12 @@ Client.prototype.destroy = function(){
   if (!arguments.length) return this._serveClient;
   this._serveClient = v;
 
-  if (v &#x26;&#x26; !clientSource) {
-    clientSource = read(require.resolve(&#x27;socket.io-client/dist/socket.io.min.js&#x27;), &#x27;utf-8&#x27;);
+  if (v &amp;&amp; !clientSource) {
+    clientSource = read(require.resolve('socket.io-client/dist/socket.io.min.js'), 'utf-8');
     try {
-      clientSourceMap = read(require.resolve(&#x27;socket.io-client/dist/socket.io.js.map&#x27;), &#x27;utf-8&#x27;);
+      clientSourceMap = read(require.resolve('socket.io-client/dist/socket.io.js.map'), 'utf-8');
     } catch(err) {
-      debug(&#x27;could not load sourcemap file&#x27;);
+      debug('could not load sourcemap file');
     }
   }
 
@@ -2469,10 +2462,10 @@ Client.prototype.destroy = function(){
 
   ```js
   // pass a server and the `serveClient` option
-  var io = require(&#x27;socket.io&#x27;)(http, { serveClient: false });
+  var io = require('socket.io')(http, { serveClient: false });
 
   // or pass no server and then you can call the method
-  var io = require(&#x27;socket.io&#x27;)();
+  var io = require('socket.io')();
   io.<span class="apidocCodeKeywordSpan">serveClient</span>(false);
   io.attach(http);
   ```
@@ -2495,21 +2488,21 @@ Client.prototype.destroy = function(){
     <li>description and source-code<pre class="apidocCodePre">serveMap = function (req, res){
   // Per the standard, ETags must be quoted:
   // https://tools.ietf.org/html/rfc7232#section-2.3
-  var expectedEtag = &#x27;&#x22;&#x27; + clientVersion + &#x27;&#x22;&#x27;;
+  var expectedEtag = '"' + clientVersion + '"';
 
-  var etag = req.headers[&#x27;if-none-match&#x27;];
+  var etag = req.headers['if-none-match'];
   if (etag) {
     if (expectedEtag == etag) {
-      debug(&#x27;serve client 304&#x27;);
+      debug('serve client 304');
       res.writeHead(304);
       res.end();
       return;
     }
   }
 
-  debug(&#x27;serve client sourcemap&#x27;);
-  res.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
-  res.setHeader(&#x27;ETag&#x27;, expectedEtag);
+  debug('serve client sourcemap');
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('ETag', expectedEtag);
   res.writeHead(200);
   res.end(clientSourceMap);
 }</pre></li>
@@ -2526,22 +2519,22 @@ Client.prototype.destroy = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">set = function (key, val){
-  if (&#x27;authorization&#x27; == key &#x26;&#x26; val) {
+  if ('authorization' == key &amp;&amp; val) {
     this.use(function(socket, next) {
       val(socket.request, function(err, authorized) {
         if (err) return next(new Error(err));
-        if (!authorized) return next(new Error(&#x27;Not authorized&#x27;));
+        if (!authorized) return next(new Error('Not authorized'));
         next();
       });
     });
-  } else if (&#x27;origins&#x27; == key &#x26;&#x26; val) {
+  } else if ('origins' == key &amp;&amp; val) {
     this.origins(val);
-  } else if (&#x27;resource&#x27; == key) {
+  } else if ('resource' == key) {
     this.path(val);
-  } else if (oldSettings[key] &#x26;&#x26; this.eio[oldSettings[key]]) {
+  } else if (oldSettings[key] &amp;&amp; this.eio[oldSettings[key]]) {
     this.eio[oldSettings[key]] = val;
   } else {
-    console.error(&#x27;Option %s is not valid. Please refer to the README.&#x27;, key);
+    console.error('Option %s is not valid. Please refer to the README.', key);
   }
 
   return this;
@@ -2582,9 +2575,9 @@ only be _broadcasted_ to clients that have joined the given `room`.
 To emit to multiple rooms, you can call `to` several times.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
+var io = require('socket.io')();
+io.on('connection', function(client){
+  client.<span class="apidocCodeKeywordSpan">to</span>('others').emit('an event', { some: 'data' });
 });
 ```
 
@@ -2613,10 +2606,10 @@ function to optionally defer execution to the next registered
 middleware.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
+var io = require('socket.io')();
 io.<span class="apidocCodeKeywordSpan">use</span>(function(socket, next){
   if (socket.request.headers.cookie) return next();
-  next(new Error(&#x27;Authentication error&#x27;));
+  next(new Error('Authentication error'));
 });
 ```
 
@@ -2643,14 +2636,14 @@ var self = this;
 
 // this writes to the actual connection
 function writeToEngine(encodedPackets) {
-  if (opts.volatile &#x26;&#x26; !self.conn.transport.writable) return;
-  for (var i = 0; i &#x3c; encodedPackets.length; i++) {
+  if (opts.volatile &amp;&amp; !self.conn.transport.writable) return;
+  for (var i = 0; i &lt; encodedPackets.length; i++) {
     self.conn.<span class="apidocCodeKeywordSpan">write</span>(encodedPackets[i], { compress: opts.compress });
   }
 }
 
-if (&#x27;open&#x27; == this.conn.readyState) {
-  debug(&#x27;writing packet %j&#x27;, packet);
+if ('open' == this.conn.readyState) {
+  debug('writing packet %j', packet);
   if (!opts.preEncoded) { // not broadcasting, need to encode
     this.encoder.encode(packet, function (encodedPackets) { // encode, then write results to engine
 ...</pre></li>
@@ -2701,18 +2694,18 @@ if (&#x27;open&#x27; == this.conn.readyState) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">add = function (client, query, fn){
-  debug(&#x27;adding socket to nsp %s&#x27;, this.name);
+  debug('adding socket to nsp %s', this.name);
   var socket = new Socket(this, client, query);
   var self = this;
   this.run(socket, function(err){
     process.nextTick(function(){
-      if (&#x27;open&#x27; == client.conn.readyState) {
+      if ('open' == client.conn.readyState) {
         if (err) return socket.error(err.data || err.message);
 
         // track socket
         self.sockets[socket.id] = socket;
 
-        // it&#x27;s paramount that the internal `onconnect` logic
+        // it's paramount that the internal `onconnect` logic
         // fires before user-set events to prevent state order
         // violations (such as a disconnection before the connection
         // logic is complete)
@@ -2720,10 +2713,10 @@ if (&#x27;open&#x27; == this.conn.readyState) {
         if (fn) fn();
 
         // fire user-set events
-        self.emit(&#x27;connect&#x27;, socket);
-        self.emit(&#x27;connection&#x27;, socket);
+        self.emit('connect', socket);
+        self.emit('connection', socket);
       } else {
-        debug(&#x27;next called after client was closed - ignoring socket&#x27;);
+        debug('next called after client was closed - ignoring socket');
       }
     });
   });
@@ -2731,7 +2724,7 @@ if (&#x27;open&#x27; == this.conn.readyState) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-  if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
+  if ('/' != name &amp;&amp; !this.nsps['/']) {
 this.connectBuffer.push(name);
 return;
   }
@@ -2741,7 +2734,7 @@ return;
 self.sockets[socket.id] = socket;
 self.nsps[nsp.name] = socket;
 
-if (&#x27;/&#x27; == nsp.name &#x26;&#x26; self.connectBuffer.length &#x3e; 0) {
+if ('/' == nsp.name &amp;&amp; self.connectBuffer.length &gt; 0) {
   self.connectBuffer.forEach(self.connect, self);
   self.connectBuffer = [];
 }
@@ -2760,7 +2753,7 @@ if (&#x27;/&#x27; == nsp.name &#x26;&#x26; self.connectBuffer.length &#x3e; 0) {
     <li>description and source-code<pre class="apidocCodePre">clients = function (fn){
   this.adapter.clients(this.rooms, fn);
   // delete rooms flag for scenario:
-  // .in(&#x27;room&#x27;).clients() (GH-1978)
+  // .in('room').clients() (GH-1978)
   delete this.rooms;
   return this;
 }</pre></li>
@@ -2771,14 +2764,14 @@ Gets a list of client IDs connected to this namespace (across all nodes if appli
 An example to get all clients in a namespace:
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">clients</span>(function(error, clients){
+var io = require('socket.io')();
+io.of('/chat').<span class="apidocCodeKeywordSpan">clients</span>(function(error, clients){
   if (error) throw error;
-  console.log(clients); // =&#x3e; [PZDoMHjiu8PYfRiKAAAF, Anw2LatarvGVVXEIAAAD]
+  console.log(clients); // =&gt; [PZDoMHjiu8PYfRiKAAAF, Anw2LatarvGVVXEIAAAD]
 });
 ```
 
-An example to get all clients in namespace&#x27;s room:
+An example to get all clients in namespace's room:
 ...</pre></li>
     </ul>
 
@@ -2799,12 +2792,12 @@ An example to get all clients in namespace&#x27;s room:
     <li>example usage<pre class="apidocCodePre">...
 
 Sets a modifier for a subsequent event emission that the event data will
-only be _compressed_ if the value is `true`. Defaults to `true` when you don&#x27;t call the method.
+only be _compressed_ if the value is `true`. Defaults to `true` when you don't call the method.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">compress</span>(false).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
+var io = require('socket.io')();
+io.on('connection', function(client){
+  client.<span class="apidocCodeKeywordSpan">compress</span>(false).emit('an event', { some: 'data' });
 });
 ```
 
@@ -2835,8 +2828,8 @@ Otherwise, it just disconnects the namespace.
 
     var packet = { type: parserType, data: args };
 
-    if (&#x27;function&#x27; == typeof args[args.length - 1]) {
-      throw new Error(&#x27;Callbacks are not supported when broadcasting&#x27;);
+    if ('function' == typeof args[args.length - 1]) {
+      throw new Error('Callbacks are not supported when broadcasting');
     }
 
     this.adapter.broadcast(packet, {
@@ -2856,9 +2849,9 @@ Otherwise, it just disconnects the namespace.
   equivalent:
 
   ```js
-  var io = require(&#x27;socket.io&#x27;)();
-  io.sockets.<span class="apidocCodeKeywordSpan">emit</span>(&#x27;an event sent to all connected clients&#x27;);
-  io.emit(&#x27;an event sent to all connected clients&#x27;);
+  var io = require('socket.io')();
+  io.sockets.<span class="apidocCodeKeywordSpan">emit</span>('an event sent to all connected clients');
+  io.emit('an event sent to all connected clients');
   ```
 
   For other available methods, see `Namespace` below.
@@ -2885,17 +2878,17 @@ Otherwise, it just disconnects the namespace.
 });
 ```
 
-An example to get all clients in namespace&#x27;s room:
+An example to get all clients in namespace's room:
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">in</span>(&#x27;general&#x27;).clients(function(error, clients){
+var io = require('socket.io')();
+io.of('/chat').<span class="apidocCodeKeywordSpan">in</span>('general').clients(function(error, clients){
   if (error) throw error;
-  console.log(clients); // =&#x3e; [Anw2LatarvGVVXEIAAAD]
+  console.log(clients); // =&gt; [Anw2LatarvGVVXEIAAAD]
 });
 ```
 
-As with broadcasting, the default is all clients from the default namespace (&#x27;/&#x27;):
+As with broadcasting, the default is all clients from the default namespace ('/'):
 ...</pre></li>
     </ul>
 
@@ -2943,7 +2936,7 @@ Namespace.prototype.__proto__ = Emitter.prototype;
   if (this.sockets.hasOwnProperty(socket.id)) {
     delete this.sockets[socket.id];
   } else {
-    debug(&#x27;ignoring remove for %s&#x27;, socket.id);
+    debug('ignoring remove for %s', socket.id);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -2951,15 +2944,15 @@ Namespace.prototype.__proto__ = Emitter.prototype;
 
 Socket.prototype.onclose = function(reason){
   if (!this.connected) return this;
-  debug(&#x27;closing socket - reason %s&#x27;, reason);
-  this.emit(&#x27;disconnecting&#x27;, reason);
+  debug('closing socket - reason %s', reason);
+  this.emit('disconnecting', reason);
   this.leaveAll();
   this.nsp.<span class="apidocCodeKeywordSpan">remove</span>(this);
   this.client.remove(this);
   this.connected = false;
   this.disconnected = true;
   delete this.nsp.connected[this.id];
-  this.emit(&#x27;disconnect&#x27;, reason);
+  this.emit('disconnect', reason);
 };
 ...</pre></li>
     </ul>
@@ -2997,12 +2990,12 @@ Socket.prototype.onclose = function(reason){
  */
 
 Namespace.prototype.add = function(client, query, fn){
-  debug(&#x27;adding socket to nsp %s&#x27;, this.name);
+  debug('adding socket to nsp %s', this.name);
   var socket = new Socket(this, client, query);
   var self = this;
   this.<span class="apidocCodeKeywordSpan">run</span>(socket, function(err){
     process.nextTick(function(){
-      if (&#x27;open&#x27; == client.conn.readyState) {
+      if ('open' == client.conn.readyState) {
 if (err) return socket.error(err.data || err.message);
 
 // track socket
@@ -3021,7 +3014,7 @@ self.sockets[socket.id] = socket;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">send = function (){
   var args = Array.prototype.slice.call(arguments);
-  args.unshift(&#x27;message&#x27;);
+  args.unshift('message');
   this.emit.apply(this, args);
   return this;
 }</pre></li>
@@ -3048,9 +3041,9 @@ only be _broadcasted_ to clients that have joined the given `room`.
 To emit to multiple rooms, you can call `to` several times.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
+var io = require('socket.io')();
+io.on('connection', function(client){
+  client.<span class="apidocCodeKeywordSpan">to</span>('others').emit('an event', { some: 'data' });
 });
 ```
 
@@ -3080,10 +3073,10 @@ function to optionally defer execution to the next registered
 middleware.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
+var io = require('socket.io')();
 io.<span class="apidocCodeKeywordSpan">use</span>(function(socket, next){
   if (socket.request.headers.cookie) return next();
-  next(new Error(&#x27;Authentication error&#x27;));
+  next(new Error('Authentication error'));
 });
 ```
 
@@ -3103,7 +3096,7 @@ packets to clients.
     <ul>
     <li>description and source-code<pre class="apidocCodePre">write = function (){
   var args = Array.prototype.slice.call(arguments);
-  args.unshift(&#x27;message&#x27;);
+  args.unshift('message');
   this.emit.apply(this, args);
   return this;
 }</pre></li>
@@ -3113,14 +3106,14 @@ var self = this;
 
 // this writes to the actual connection
 function writeToEngine(encodedPackets) {
-  if (opts.volatile &#x26;&#x26; !self.conn.transport.writable) return;
-  for (var i = 0; i &#x3c; encodedPackets.length; i++) {
+  if (opts.volatile &amp;&amp; !self.conn.transport.writable) return;
+  for (var i = 0; i &lt; encodedPackets.length; i++) {
     self.conn.<span class="apidocCodeKeywordSpan">write</span>(encodedPackets[i], { compress: opts.compress });
   }
 }
 
-if (&#x27;open&#x27; == this.conn.readyState) {
-  debug(&#x27;writing packet %j&#x27;, packet);
+if ('open' == this.conn.readyState) {
+  debug('writing packet %j', packet);
   if (!opts.preEncoded) { // not broadcasting, need to encode
     this.encoder.encode(packet, function (encodedPackets) { // encode, then write results to engine
 ...</pre></li>
@@ -3144,7 +3137,7 @@ if (&#x27;open&#x27; == this.conn.readyState) {
   this.nsp = nsp;
   this.server = nsp.server;
   this.adapter = this.nsp.adapter;
-  this.id = nsp.name !== &#x27;/&#x27; ? nsp.name + &#x27;#&#x27; + client.id : client.id;
+  this.id = nsp.name !== '/' ? nsp.name + '#' + client.id : client.id;
   this.client = client;
   this.conn = client.conn;
   this.rooms = {};
@@ -3180,7 +3173,7 @@ if (&#x27;open&#x27; == this.conn.readyState) {
     // prevent double callbacks
     if (sent) return;
     var args = Array.prototype.slice.call(arguments);
-    debug(&#x27;sending ack %j&#x27;, args);
+    debug('sending ack %j', args);
 
     var type = hasBin(args) ? parser.BINARY_ACK : parser.ACK;
     self.packet({
@@ -3196,10 +3189,10 @@ if (&#x27;open&#x27; == this.conn.readyState) {
 
 Socket.prototype.onevent = function(packet){
  var args = packet.data || [];
- debug(&#x27;emitting event %j&#x27;, args);
+ debug('emitting event %j', args);
 
  if (null != packet.id) {
-   debug(&#x27;attaching ack callback to event&#x27;);
+   debug('attaching ack callback to event');
    args.push(this.<span class="apidocCodeKeywordSpan">ack</span>(packet.id));
  }
 
@@ -3229,7 +3222,7 @@ Socket.prototype.onevent = function(packet){
   }
   return {
     headers: this.request.headers,
-    time: (new Date) + &#x27;&#x27;,
+    time: (new Date) + '',
     address: this.conn.remoteAddress,
     xdomain: !!this.request.headers.origin,
     secure: !!this.request.connection.encrypted,
@@ -3239,7 +3232,7 @@ Socket.prototype.onevent = function(packet){
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
- this.id = nsp.name !== &#x27;/&#x27; ? nsp.name + &#x27;#&#x27; + client.id : client.id;
+ this.id = nsp.name !== '/' ? nsp.name + '#' + client.id : client.id;
  this.client = client;
  this.conn = client.conn;
  this.rooms = {};
@@ -3273,12 +3266,12 @@ Socket.prototype.onevent = function(packet){
     <li>example usage<pre class="apidocCodePre">...
 
 Sets a modifier for a subsequent event emission that the event data will
-only be _compressed_ if the value is `true`. Defaults to `true` when you don&#x27;t call the method.
+only be _compressed_ if the value is `true`. Defaults to `true` when you don't call the method.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">compress</span>(false).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
+var io = require('socket.io')();
+io.on('connection', function(client){
+  client.<span class="apidocCodeKeywordSpan">compress</span>(false).emit('an event', { some: 'data' });
 });
 ```
 
@@ -3304,7 +3297,7 @@ Otherwise, it just disconnects the namespace.
     this.client.disconnect();
   } else {
     this.packet({ type: parser.DISCONNECT });
-    this.onclose(&#x27;server namespace disconnect&#x27;);
+    this.onclose('server namespace disconnect');
   }
   return this;
 }</pre></li>
@@ -3337,7 +3330,7 @@ Client.prototype.disconnect = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">dispatch = function (event){
-  debug(&#x27;dispatching an event %j&#x27;, event);
+  debug('dispatching an event %j', event);
   var self = this;
   this.run(event, function(err){
     process.nextTick(function(){
@@ -3349,10 +3342,10 @@ Client.prototype.disconnect = function(){
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
- debug(&#x27;emitting event %j&#x27;, args);
+ debug('emitting event %j', args);
 
  if (null != packet.id) {
-   debug(&#x27;attaching ack callback to event&#x27;);
+   debug('attaching ack callback to event');
    args.push(this.ack(packet.id));
  }
 
@@ -3386,13 +3379,13 @@ Client.prototype.disconnect = function(){
     packet.data = args;
     var flags = this.flags || {};
 
-    // access last argument to see if it&#x27;s an ACK callback
-    if (&#x27;function&#x27; == typeof args[args.length - 1]) {
+    // access last argument to see if it's an ACK callback
+    if ('function' == typeof args[args.length - 1]) {
       if (this._rooms || flags.broadcast) {
-        throw new Error(&#x27;Callbacks are not supported when broadcasting&#x27;);
+        throw new Error('Callbacks are not supported when broadcasting');
       }
 
-      debug(&#x27;emitting packet with ack id %d&#x27;, this.nsp.ids);
+      debug('emitting packet with ack id %d', this.nsp.ids);
       this.acks[this.nsp.ids] = args.pop();
       packet.id = this.nsp.ids++;
     }
@@ -3424,9 +3417,9 @@ Client.prototype.disconnect = function(){
   equivalent:
 
   ```js
-  var io = require(&#x27;socket.io&#x27;)();
-  io.sockets.<span class="apidocCodeKeywordSpan">emit</span>(&#x27;an event sent to all connected clients&#x27;);
-  io.emit(&#x27;an event sent to all connected clients&#x27;);
+  var io = require('socket.io')();
+  io.sockets.<span class="apidocCodeKeywordSpan">emit</span>('an event sent to all connected clients');
+  io.emit('an event sent to all connected clients');
   ```
 
   For other available methods, see `Namespace` below.
@@ -3449,18 +3442,18 @@ Client.prototype.disconnect = function(){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 Namespace.prototype.add = function(client, query, fn){
-  debug(&#x27;adding socket to nsp %s&#x27;, this.name);
+  debug('adding socket to nsp %s', this.name);
   var socket = new Socket(this, client, query);
   var self = this;
   this.run(socket, function(err){
     process.nextTick(function(){
-      if (&#x27;open&#x27; == client.conn.readyState) {
+      if ('open' == client.conn.readyState) {
 if (err) return socket.<span class="apidocCodeKeywordSpan">error</span>(err.data || err.message);
 
 // track socket
 self.sockets[socket.id] = socket;
 
-// it&#x27;s paramount that the internal `onconnect` logic
+// it's paramount that the internal `onconnect` logic
 // fires before user-set events to prevent state order
 // violations (such as a disconnection before the connection
 ...</pre></li>
@@ -3484,17 +3477,17 @@ self.sockets[socket.id] = socket;
 });
 ```
 
-An example to get all clients in namespace&#x27;s room:
+An example to get all clients in namespace's room:
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.of(&#x27;/chat&#x27;).<span class="apidocCodeKeywordSpan">in</span>(&#x27;general&#x27;).clients(function(error, clients){
+var io = require('socket.io')();
+io.of('/chat').<span class="apidocCodeKeywordSpan">in</span>('general').clients(function(error, clients){
   if (error) throw error;
-  console.log(clients); // =&#x3e; [Anw2LatarvGVVXEIAAAD]
+  console.log(clients); // =&gt; [Anw2LatarvGVVXEIAAAD]
 });
 ```
 
-As with broadcasting, the default is all clients from the default namespace (&#x27;/&#x27;):
+As with broadcasting, the default is all clients from the default namespace ('/'):
 ...</pre></li>
     </ul>
 
@@ -3508,17 +3501,17 @@ As with broadcasting, the default is all clients from the default namespace (&#x
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">join = function (room, fn){
-  debug(&#x27;joining room %s&#x27;, room);
+  debug('joining room %s', room);
   var self = this;
   if (this.rooms.hasOwnProperty(room)) {
-    fn &#x26;&#x26; fn(null);
+    fn &amp;&amp; fn(null);
     return this;
   }
   this.adapter.add(this.id, room, function(err){
-    if (err) return fn &#x26;&#x26; fn(err);
-    debug(&#x27;joined room %s&#x27;, room);
+    if (err) return fn &amp;&amp; fn(err);
+    debug('joined room %s', room);
     self.rooms[room] = room;
-    fn &#x26;&#x26; fn(null);
+    fn &amp;&amp; fn(null);
   });
   return this;
 }</pre></li>
@@ -3528,7 +3521,7 @@ As with broadcasting, the default is all clients from the default namespace (&#x
 */
 
 Socket.prototype.onconnect = function(){
- debug(&#x27;socket connected - writing packet&#x27;);
+ debug('socket connected - writing packet');
  this.nsp.connected[this.id] = this;
  this.<span class="apidocCodeKeywordSpan">join</span>(this.id);
  this.packet({ type: parser.CONNECT });
@@ -3551,13 +3544,13 @@ Socket.prototype.onconnect = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">leave = function (room, fn){
-  debug(&#x27;leave room %s&#x27;, room);
+  debug('leave room %s', room);
   var self = this;
   this.adapter.del(this.id, room, function(err){
-    if (err) return fn &#x26;&#x26; fn(err);
-    debug(&#x27;left room %s&#x27;, room);
+    if (err) return fn &amp;&amp; fn(err);
+    debug('left room %s', room);
     delete self.rooms[room];
-    fn &#x26;&#x26; fn(null);
+    fn &amp;&amp; fn(null);
   });
   return this;
 }</pre></li>
@@ -3583,15 +3576,15 @@ Socket.prototype.onconnect = function(){
 
 Socket.prototype.onclose = function(reason){
   if (!this.connected) return this;
-  debug(&#x27;closing socket - reason %s&#x27;, reason);
-  this.emit(&#x27;disconnecting&#x27;, reason);
+  debug('closing socket - reason %s', reason);
+  this.emit('disconnecting', reason);
   this.<span class="apidocCodeKeywordSpan">leaveAll</span>();
   this.nsp.remove(this);
   this.client.remove(this);
   this.connected = false;
   this.disconnected = true;
   delete this.nsp.connected[this.id];
-  this.emit(&#x27;disconnect&#x27;, reason);
+  this.emit('disconnect', reason);
 };
 ...</pre></li>
     </ul>
@@ -3607,12 +3600,12 @@ Socket.prototype.onclose = function(reason){
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onack = function (packet){
   var ack = this.acks[packet.id];
-  if (&#x27;function&#x27; == typeof ack) {
-    debug(&#x27;calling ack %s with %j&#x27;, packet.id, packet.data);
+  if ('function' == typeof ack) {
+    debug('calling ack %s with %j', packet.id, packet.data);
     ack.apply(this, packet.data);
     delete this.acks[packet.id];
   } else {
-    debug(&#x27;bad ack %s&#x27;, packet.id);
+    debug('bad ack %s', packet.id);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -3645,25 +3638,25 @@ case parser.DISCONNECT:
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onclose = function (reason){
   if (!this.connected) return this;
-  debug(&#x27;closing socket - reason %s&#x27;, reason);
-  this.emit(&#x27;disconnecting&#x27;, reason);
+  debug('closing socket - reason %s', reason);
+  this.emit('disconnecting', reason);
   this.leaveAll();
   this.nsp.remove(this);
   this.client.remove(this);
   this.connected = false;
   this.disconnected = true;
   delete this.nsp.connected[this.id];
-  this.emit(&#x27;disconnect&#x27;, reason);
+  this.emit('disconnect', reason);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @api private
 */
 
 Client.prototype.close = function(){
- if (&#x27;open&#x27; == this.conn.readyState) {
-   debug(&#x27;forcing transport close&#x27;);
+ if ('open' == this.conn.readyState) {
+   debug('forcing transport close');
    this.conn.close();
-   this.<span class="apidocCodeKeywordSpan">onclose</span>(&#x27;forced server close&#x27;);
+   this.<span class="apidocCodeKeywordSpan">onclose</span>('forced server close');
  }
 };
 
@@ -3684,7 +3677,7 @@ Client.prototype.close = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onconnect = function (){
-  debug(&#x27;socket connected - writing packet&#x27;);
+  debug('socket connected - writing packet');
   this.nsp.connected[this.id] = this;
   this.join(this.id);
   this.packet({ type: parser.CONNECT });
@@ -3693,7 +3686,7 @@ Client.prototype.close = function(){
   // track socket
   self.sockets[socket.id] = socket;
 
-  // it&#x27;s paramount that the internal `onconnect` logic
+  // it's paramount that the internal `onconnect` logic
   // fires before user-set events to prevent state order
   // violations (such as a disconnection before the connection
   // logic is complete)
@@ -3701,10 +3694,10 @@ Client.prototype.close = function(){
   if (fn) fn();
 
   // fire user-set events
-  self.emit(&#x27;connect&#x27;, socket);
-  self.emit(&#x27;connection&#x27;, socket);
+  self.emit('connect', socket);
+  self.emit('connection', socket);
 } else {
-  debug(&#x27;next called after client was closed - ignoring socket&#x27;);
+  debug('next called after client was closed - ignoring socket');
 ...</pre></li>
     </ul>
 
@@ -3718,8 +3711,8 @@ Client.prototype.close = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">ondisconnect = function (){
-  debug(&#x27;got disconnect packet&#x27;);
-  this.onclose(&#x27;client namespace disconnect&#x27;);
+  debug('got disconnect packet');
+  this.onclose('client namespace disconnect');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
       break;
@@ -3733,7 +3726,7 @@ Client.prototype.close = function(){
       break;
 
     case parser.ERROR:
-      this.emit(&#x27;error&#x27;, packet.data);
+      this.emit('error', packet.data);
   }
 };
 ...</pre></li>
@@ -3749,10 +3742,10 @@ Client.prototype.close = function(){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onerror = function (err){
-  if (this.listeners(&#x27;error&#x27;).length) {
-    this.emit(&#x27;error&#x27;, err);
+  if (this.listeners('error').length) {
+    this.emit('error', err);
   } else {
-    console.error(&#x27;Missing error handler on `socket`.&#x27;);
+    console.error('Missing error handler on `socket`.');
     console.error(err.stack);
   }
 }</pre></li>
@@ -3786,10 +3779,10 @@ Client.prototype.ondata = function(data){
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onevent = function (packet){
   var args = packet.data || [];
-  debug(&#x27;emitting event %j&#x27;, args);
+  debug('emitting event %j', args);
 
   if (null != packet.id) {
-    debug(&#x27;attaching ack callback to event&#x27;);
+    debug('attaching ack callback to event');
     args.push(this.ack(packet.id));
   }
 
@@ -3800,7 +3793,7 @@ Client.prototype.ondata = function(data){
  */
 
 Socket.prototype.onpacket = function(packet){
-  debug(&#x27;got packet %j&#x27;, packet);
+  debug('got packet %j', packet);
   switch (packet.type) {
 case parser.EVENT:
   this.<span class="apidocCodeKeywordSpan">onevent</span>(packet);
@@ -3824,7 +3817,7 @@ case parser.ACK:
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">onpacket = function (packet){
-  debug(&#x27;got packet %j&#x27;, packet);
+  debug('got packet %j', packet);
   switch (packet.type) {
     case parser.EVENT:
       this.onevent(packet);
@@ -3847,7 +3840,7 @@ case parser.ACK:
       break;
 
     case parser.ERROR:
-      this.emit(&#x27;error&#x27;, packet.data);
+      this.emit('error', packet.data);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -3861,7 +3854,7 @@ Client.prototype.ondecoded = function(packet) {
         socket.<span class="apidocCodeKeywordSpan">onpacket</span>(packet);
       });
     } else {
-      debug(&#x27;no socket for namespace %s&#x27;, packet.nsp);
+      debug('no socket for namespace %s', packet.nsp);
     }
   }
 };
@@ -3888,14 +3881,14 @@ Client.prototype.ondecoded = function(packet) {
  */
 
 Client.prototype.connect = function(name, query){
-debug(&#x27;connecting to namespace %s&#x27;, name);
+debug('connecting to namespace %s', name);
 var nsp = this.server.nsps[name];
 if (!nsp) {
-  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : &#x27;Invalid namespace&#x27;});
+  this.<span class="apidocCodeKeywordSpan">packet</span>({ type: parser.ERROR, nsp: name, data : 'Invalid namespace'});
   return;
 }
 
-if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
+if ('/' != name &amp;&amp; !this.nsps['/']) {
   this.connectBuffer.push(name);
   return;
 }
@@ -3935,12 +3928,12 @@ if (&#x27;/&#x27; != name &#x26;&#x26; !this.nsps[&#x27;/&#x27;]) {
  */
 
 Namespace.prototype.add = function(client, query, fn){
-  debug(&#x27;adding socket to nsp %s&#x27;, this.name);
+  debug('adding socket to nsp %s', this.name);
   var socket = new Socket(this, client, query);
   var self = this;
   this.<span class="apidocCodeKeywordSpan">run</span>(socket, function(err){
     process.nextTick(function(){
-      if (&#x27;open&#x27; == client.conn.readyState) {
+      if ('open' == client.conn.readyState) {
 if (err) return socket.error(err.data || err.message);
 
 // track socket
@@ -3959,7 +3952,7 @@ self.sockets[socket.id] = socket;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">send = function (){
   var args = Array.prototype.slice.call(arguments);
-  args.unshift(&#x27;message&#x27;);
+  args.unshift('message');
   this.emit.apply(this, args);
   return this;
 }</pre></li>
@@ -3986,9 +3979,9 @@ only be _broadcasted_ to clients that have joined the given `room`.
 To emit to multiple rooms, you can call `to` several times.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
-io.on(&#x27;connection&#x27;, function(client){
-  client.<span class="apidocCodeKeywordSpan">to</span>(&#x27;others&#x27;).emit(&#x27;an event&#x27;, { some: &#x27;data&#x27; });
+var io = require('socket.io')();
+io.on('connection', function(client){
+  client.<span class="apidocCodeKeywordSpan">to</span>('others').emit('an event', { some: 'data' });
 });
 ```
 
@@ -4018,10 +4011,10 @@ function to optionally defer execution to the next registered
 middleware.
 
 ```js
-var io = require(&#x27;socket.io&#x27;)();
+var io = require('socket.io')();
 io.<span class="apidocCodeKeywordSpan">use</span>(function(socket, next){
   if (socket.request.headers.cookie) return next();
-  next(new Error(&#x27;Authentication error&#x27;));
+  next(new Error('Authentication error'));
 });
 ```
 
@@ -4041,7 +4034,7 @@ packets to clients.
     <ul>
     <li>description and source-code<pre class="apidocCodePre">write = function (){
   var args = Array.prototype.slice.call(arguments);
-  args.unshift(&#x27;message&#x27;);
+  args.unshift('message');
   this.emit.apply(this, args);
   return this;
 }</pre></li>
@@ -4051,14 +4044,14 @@ var self = this;
 
 // this writes to the actual connection
 function writeToEngine(encodedPackets) {
-  if (opts.volatile &#x26;&#x26; !self.conn.transport.writable) return;
-  for (var i = 0; i &#x3c; encodedPackets.length; i++) {
+  if (opts.volatile &amp;&amp; !self.conn.transport.writable) return;
+  for (var i = 0; i &lt; encodedPackets.length; i++) {
     self.conn.<span class="apidocCodeKeywordSpan">write</span>(encodedPackets[i], { compress: opts.compress });
   }
 }
 
-if (&#x27;open&#x27; == this.conn.readyState) {
-  debug(&#x27;writing packet %j&#x27;, packet);
+if ('open' == this.conn.readyState) {
+  debug('writing packet %j', packet);
   if (!opts.preEncoded) { // not broadcasting, need to encode
     this.encoder.encode(packet, function (encodedPackets) { // encode, then write results to engine
 ...</pre></li>
@@ -4073,3 +4066,4 @@ if (&#x27;open&#x27; == this.conn.readyState) {
     ]
 </div>
 </div>
+</body></html>
