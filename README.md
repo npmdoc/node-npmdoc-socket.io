@@ -1,6 +1,6 @@
 # npmdoc-socket.io
 
-#### api documentation for  [socket.io (v1.7.3)](https://github.com/socketio/socket.io#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-socket.io.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socket.io) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socket.io.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socket.io)
+#### basic api documentation for  [socket.io (v1.7.3)](https://github.com/socketio/socket.io#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-socket.io.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socket.io) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socket.io.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socket.io)
 
 #### node.js realtime framework server
 
@@ -100,7 +100,8 @@
     "scripts": {
         "test": "gulp test"
     },
-    "version": "1.7.3"
+    "version": "1.7.3",
+    "bin": {}
 }
 ```
 
